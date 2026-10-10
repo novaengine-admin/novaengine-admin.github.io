@@ -1,3 +1,18 @@
-theme: jekyll-theme-minimal
-title: Geo Regions – Subscriber Guide
-description: Geo Regions is a managed Salesforce package that adds interactive choropleth maps to your Lightning pages. It shades geographic regions by your Salesforce data – letting you visualise metrics like Account counts, Revenue, or any numeric value across states, local government areas, and more.
+title: Geo Regions Documentation
+description: Subscriber and Developer Guide
+
+url: "https://novaengine-admin.github.io"
+baseurl: ""
+
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+
+search_enabled: true
+heading_anchors: true
+color_scheme: light
+
+aux_links:
+  "GitHub Repository":
+    - "https://github.com/novaengine-admin/novaengine-admin.github.io"
