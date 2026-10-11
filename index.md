@@ -1,7 +1,8 @@
 ---
-title: Home
-layout: home
+title: Product Documentation
 nav_exclude: true
+has_children: true
 ---
 
-A small introduction to novaengine product documentation
+# Product Documentation
+Welcome to the Product Documentation.
