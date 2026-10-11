@@ -1,0 +1,192 @@
+/* =========================================
+   NovaEngine Documentation — Custom Styling
+   Theme: Just the Docs
+   ========================================= */
+
+:root {
+  --nova-primary: #2457c5;
+  --nova-primary-dark: #193f91;
+  --nova-text: #172033;
+  --nova-muted: #64748b;
+  --nova-border: #e2e8f0;
+  --nova-surface: #f8fafc;
+  --nova-accent-bg: #eff6ff;
+}
+
+/* Main content */
+.main-content {
+  color: var(--nova-text);
+  line-height: 1.75;
+}
+
+.main-content p {
+  margin-bottom: 1rem;
+}
+
+.main-content h1 {
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.main-content h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--nova-border);
+  padding-bottom: 0.55rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.main-content h3 {
+  font-weight: 650;
+  margin-top: 2rem;
+}
+
+/* Links */
+.main-content a:not(.btn) {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.main-content a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Tables */
+.main-content table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--nova-border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.92rem;
+}
+
+.main-content th {
+  background: var(--nova-surface);
+  font-weight: 650;
+}
+
+.main-content th,
+.main-content td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--nova-border);
+  border-right: 1px solid var(--nova-border);
+  vertical-align: top;
+}
+
+.main-content tr:last-child td {
+  border-bottom: 0;
+}
+
+.main-content th:last-child,
+.main-content td:last-child {
+  border-right: 0;
+}
+
+/* Code blocks */
+.main-content div.highlight,
+.main-content figure.highlight {
+  border: 1px solid var(--nova-border);
+  border-radius: 9px;
+  margin: 1.25rem 0;
+}
+
+.main-content pre {
+  line-height: 1.6;
+}
+
+.main-content p code,
+.main-content li code,
+.main-content td code {
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 4px;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.88em;
+}
+
+/* Buttons */
+.main-content a.btn {
+  border-radius: 7px;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  margin: 0.25rem 0.35rem 0.5rem 0;
+  transition: background-color 0.15s ease;
+}
+
+.main-content a.btn-blue {
+  background: var(--nova-primary);
+}
+
+.main-content a.btn-blue:hover {
+  background: var(--nova-primary-dark);
+}
+
+/* Reusable release panel */
+.release-card {
+  border: 1px solid #cbdcfb;
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin: 1.25rem 0 2rem;
+  background: linear-gradient(135deg, #f8fbff, #eff6ff);
+}
+
+.release-card h2,
+.release-card h3 {
+  margin-top: 0.4rem;
+  border-bottom: 0;
+}
+
+.release-meta {
+  color: var(--nova-muted);
+  font-size: 0.9rem;
+}
+
+.release-label {
+  display: inline-block;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* Sidebar polish */
+.side-bar {
+  border-right: 1px solid var(--nova-border);
+}
+
+.site-title {
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 800px) {
+  .main-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .main-content h2 {
+    margin-top: 2rem;
+  }
+
+  .main-content table {
+    font-size: 0.82rem;
+  }
+
+  .main-content th,
+  .main-content td {
+    padding: 0.6rem;
+  }
+
+  .release-card {
+    padding: 1rem;
+  }
+}
