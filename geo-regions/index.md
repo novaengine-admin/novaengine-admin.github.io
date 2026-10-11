@@ -21,19 +21,13 @@ Geo Regions is a managed Salesforce package that adds interactive choropleth map
 
 ### 1. Install the Packages
 
-Select the release version you want to install. Install Geo Regions first, followed by the required country extension.
+Install **Geo Regions** first, then the country package. Click the installation link for the version you need -- it will open the Salesforce installer.
 
-<label for="geo-release-version">Release version</label>
+**Geo Regions** (core engine -- install first):
 
-<select id="geo-release-version"> <option value="0.1.0" selected>0.1.0 — October 2026</option> <option value="future">Next release (example)</option> </select>
-
-<div id="geo-release-details"> <h4>Geo Regions 0.1.0</h4> <p><strong>Core engine — install first</strong></p> <p> <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE">Install in Production</a> | <a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE">Install in Sandbox</a> </p> </div>
-
-<script> document.addEventListener("DOMContentLoaded", function () { const selector = document.getElementById("geo-release-version"); const details = document.getElementById("geo-release-details");
-
-const releases = { "0.1.0": <h4>Geo Regions 0.1.0</h4> <p><strong>Core engine — install first</strong></p> <p> <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE">Install in Production</a> | <a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE">Install in Sandbox</a> </p> , "future": <h4>Next release</h4> <p>Installation links will be published when this release is available.</p> };
-
-selector.addEventListener("change", function () { details.innerHTML = releases[selector.value] || ""; }); }); </script>
+| Version | Release | Install Link |
+|---------|---------|--------------|
+| 0.1.0 | 2026 October | [Install in Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) / [Install in Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) |
 
 ### 2. Assign the Permission Set
 
