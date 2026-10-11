@@ -1,4 +1,4 @@
-title: Geo Regions Documentation
+title: Product Documentation
 description: Subscriber and Developer Guide
 
 url: "https://novaengine-admin.github.io"
@@ -12,7 +12,3 @@ plugins:
 search_enabled: true
 heading_anchors: true
 color_scheme: light
-
-aux_links:
-  "GitHub Repository":
-    - "https://github.com/novaengine-admin/novaengine-admin.github.io"
