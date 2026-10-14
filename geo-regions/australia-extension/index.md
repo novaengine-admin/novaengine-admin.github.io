@@ -1,89 +1,70 @@
 ---
 title: Australia Extension
 parent: Geo Regions
-nav_order: 1
+has_children: true
+nav_order: 2
 permalink: /geo-regions/australia-extension/
+description: Local Government Area maps for every Australian state and territory.
 ---
 
-# Geo Regions -- Australia Extension
+# Geo Regions — Australia Extension
+{: .no_toc }
 
-This extension provides maps related to Australia. As of today, following map types are available.
+This extension adds Local Government Area (LGA) maps for Australia to Geo Regions.
 
-**Packages you install:**
-
-1. **Geo Regions** -- the map engine is a prerequisite.
-2. **Geo Regions - Australia** -- Australian map boundaries.
+1. TOC
+{:toc}
 
 ---
 
-## Getting Started
+## Packages
 
-### 1. Install the Packages
+| Package | Purpose |
+|---------|---------|
+| **Geo Regions** | The map engine. Install it first. |
+| **Geo Regions - Australia** | Australian map boundaries. Requires Geo Regions 0.1.0 or later. |
 
-Install **Geo Regions** first, then the country package. Click the installation link for the version you need -- it will open the Salesforce installer.
+## Install the packages
 
-**Geo Regions** (core engine -- install first):
+Install **Geo Regions** first, then **Geo Regions - Australia**. Each link opens the Salesforce installer.
 
-| Version | Release | Install Link |
-|---------|---------|--------------|
-| 0.1.0 | 2026 October | [Install in Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) / [Install in Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) |
+**Geo Regions** (core engine — install first):
+
+| Version | Release | Production | Sandbox |
+|---------|---------|------------|---------|
+| 0.2.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXBBYA4) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXBBYA4) |
+| 0.1.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) |
 
 **Geo Regions - Australia** (Australian map boundaries):
 
-| Version | Release | Install Link |
-|---------|---------|--------------|
-| 0.1.0 | 2026 October | [Install in Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilj0LYAQ) / [Install in Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilj0LYAQ) |
+| Version | Release | Production | Sandbox |
+|---------|---------|------------|---------|
+| 0.2.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXG1YAO) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXG1YAO) |
+| 0.1.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilj0LYAQ) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilj0LYAQ) |
 
-### 2. Assign the Permission Set
+Version 0.1.0 includes the Victoria map only. Version 0.2.0 adds all states and territories.
+{: .note }
 
-Assign the **Geo Regions User** permission set to any users who need access to the map.
-
-1. Go to **Setup > Permission Sets**.
-2. Find **Geo Regions User**.
-3. Click **Manage Assignments > Add Assignment** and select the relevant users.
+After installing, assign the **Geo Regions User** permission set. See [Assign the permission set]({{ site.baseurl }}/geo-regions/#2-assign-the-permission-set).
 
 ---
 
-## Available Maps
+## Available maps
 
-| Map | Key | Description | Region Count |
-|-----|-----|-------------|--------------|
-| Victoria LGAs | `AU_VIC_LGA` | Local Government Areas in Victoria | 82 |
+| Map | Key | Regions |
+|-----|-----|---------|
+| Australian Capital Territory | `AU_ACT_LGA` | 3 |
+| New South Wales | `AU_NSW_LGA` | 131 |
+| Northern Territory | `AU_NT_LGA` | 22 |
+| Other Territories | `AU_OT_LGA` | 4 |
+| Queensland | `AU_QLD_LGA` | 80 |
+| South Australia | `AU_SA_LGA` | 73 |
+| Tasmania | `AU_TAS_LGA` | 31 |
+| Victoria | `AU_VIC_LGA` | 82 |
+| Western Australia | `AU_WA_LGA` | 140 |
 
-More Australian maps will be added in future releases. Each new map becomes available automatically after a package upgrade -- no configuration needed.
+Region counts include a few non-geographic entries such as `No usual address`.
 
----
+Use the key as the `map-type` value, or pick the map from the **Region** dropdown in Lightning App Builder. New maps become available automatically after a package upgrade — no configuration needed.
 
-## Region Name Reference
-
-Region names in your data must match exactly (case-sensitive).
-
-### Victoria LGAs (`AU_VIC_LGA`)
-
-| | | | |
-|---|---|---|---|
-| Alpine | Ararat | Ballarat | Banyule |
-| Bass Coast | Baw Baw | Bayside | Benalla |
-| Boroondara | Brimbank | Buloke | Campaspe |
-| Cardinia | Casey | Central Goldfields | Colac Otway |
-| Corangamite | Darebin | East Gippsland | Frankston |
-| Glen Eira | Glenelg | Golden Plains | Greater Bendigo |
-| Greater Dandenong | Greater Geelong | Greater Shepparton | Hepburn |
-| Hindmarsh | Hobsons Bay | Horsham | Hume |
-| Indigo | Kingston | Knox | Latrobe |
-| Macedon Ranges | Manningham | Maribyrnong | Maroondah |
-| Melbourne | Melton | Merri-bek | Mildura |
-| Mitchell | Moira | Monash | Moonee Valley |
-| Moorabool | Mornington Peninsula | Mount Alexander | Moyne |
-| Murrindindi | Nillumbik | Northern Grampians | Port Phillip |
-| Pyrenees | Queenscliffe | South Gippsland | Southern Grampians |
-| Stonnington | Strathbogie | Surf Coast | Swan Hill |
-| Towong | Wangaratta | Warrnambool | Wellington |
-| West Wimmera | Whitehorse | Whittlesea | Wodonga |
-| Wyndham | Yarra | Yarra Ranges | Yarriambiack |
-
----
-
-## Support
-
-For questions or issues, contact your Salesforce administrator or the package provider.
+The names your data must use are listed on the [Region Names]({{ site.baseurl }}/geo-regions/australia-extension/region-names/) page.

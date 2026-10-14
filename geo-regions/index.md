@@ -3,241 +3,92 @@ title: Geo Regions
 nav_order: 1
 has_children: true
 permalink: /geo-regions/
+description: Interactive choropleth maps for Salesforce Lightning pages.
 ---
 
-# Geo Regions -- Subscriber Guide
+# Geo Regions — Overview
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+---
 
 ## What is Geo Regions?
 
-Geo Regions is a managed Salesforce package that adds interactive choropleth maps to your Lightning pages. It shades geographic regions by your Salesforce data -- letting you visualise metrics like Account counts, Revenue, or any numeric value across states, local government areas, and more.
+Geo Regions is a managed Salesforce package that adds interactive choropleth maps to your Lightning pages. It shades geographic regions by your Salesforce data, so you can visualise metrics such as Account counts or Revenue across states, local government areas and more.
 
-**Package you install:**
+The core package is the map engine and ships no geography. Map boundaries come from country packages, so you install only the ones you need:
 
-* **Geo Regions** -- the map engine.
+| Package | Purpose |
+|---------|---------|
+| **Geo Regions** | The map engine. Install it first. |
+| [**Geo Regions - Australia**]({{ site.baseurl }}/geo-regions/australia-extension/) | Local Government Area maps for every Australian state and territory. |
 
 ---
 
-## Getting Started
+## Getting started
 
-### 1. Install the Packages
+### 1. Install the packages
 
-Install **Geo Regions** first, then the country package. Click the installation link for the version you need -- it will open the Salesforce installer.
+Install **Geo Regions** first, then the country packages you need. Each link opens the Salesforce installer.
 
-**Geo Regions** (core engine -- install first):
+| Version | Release | Production | Sandbox |
+|---------|---------|------------|---------|
+| 0.2.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXBBYA4) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXBBYA4) |
+| 0.1.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) |
 
-| Version | Release | Install Link |
-|---------|---------|--------------|
-| 0.1.0 | 2026 October | [Install in Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) / [Install in Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) |
+For country package install links, see the [Australia extension]({{ site.baseurl }}/geo-regions/australia-extension/).
 
-### 2. Assign the Permission Set
+### 2. Assign the permission set
 
-Assign the **Geo Regions User** permission set to any users who need access to the map.
+Assign the **Geo Regions User** permission set to everyone who needs access to the map.
 
 1. Go to **Setup > Permission Sets**.
 2. Find **Geo Regions User**.
-3. Click **Manage Assignments > Add Assignment** and select the relevant users.
+3. Click **Manage Assignments > Add Assignment** and select the users.
 
 ---
 
-## Available Maps
+## Available maps
 
-Please install available extensions to add more map types.
+Maps are delivered by country packages. Each installed map appears in the **Region** dropdown in Lightning App Builder, and its key is the value to pass as `map-type` in code.
+
+| Package | Maps |
+|---------|------|
+| [Geo Regions - Australia]({{ site.baseurl }}/geo-regions/australia-extension/) | Local Government Areas for ACT, NSW, NT, Other Territories, QLD, SA, TAS, VIC and WA |
 
 ---
 
-## Developer Guide
+## Add a map to a page
 
-To display the map and shade it with your Salesforce data, a developer builds a wrapper Lightning Web Component (LWC) that queries data and passes it to the Geo Map component.
+The **Geo Map** component can be placed on App pages, Record pages and Home pages in Lightning App Builder. It has two properties:
 
-### Component API
+| Property | Description |
+|----------|-------------|
+| **Region** | The installed map to display. |
+| **Map Height** | CSS height of the map. Defaults to `520px`. |
 
-```html
-<novaengine-geo-map
-  map-type="AU_VIC_LGA"
-  data={records}
-  config={mapConfig}
-  height="600px"
-  onregionselect={handleRegionSelect}>
-</novaengine-geo-map>
-```
+Data and colour settings can't be set in App Builder. To shade the map with your own data, a developer wraps the component in a custom LWC. See the [Developer Guide]({{ site.baseurl }}/geo-regions/developer-guide/).
 
-| Attribute | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `map-type` | String | Yes | The map key (e.g., `AU_VIC_LGA`). See [Available Maps](#available-maps) for valid keys. |
-| `data` | Array | No | Array of objects containing your Salesforce data. |
-| `config` | Object | No | Configures how data maps to regions, colours, and tooltips. |
-| `height` | String | No | CSS height (e.g., `600px`, `80vh`). Defaults to `520px`. |
-| `onregionselect` | Function | No | Event handler called when a user clicks a region. |
+## Using the map
 
-### Preparing Your Data
+- **Hover** over a region to see its tooltip.
+- **Click** a region to zoom to it.
+- **Click a legend item** to dim every region outside that value range. Click it again to clear the filter. Legend items also work with the keyboard (Tab, then Enter or Space).
+- Regions with no matching record in your data stay grey, so missing data is never mistaken for a low value.
 
-Your data should be an array of objects. One field must contain region names that match the map's regions (see [Region Name Reference](#region-name-reference)).
-
-```javascript
-// Example: Accounts aggregated by LGA
-[
-  { lgaName: "Melbourne",  accountCount: 150, totalRevenue: 75000 },
-  { lgaName: "Geelong",    accountCount: 85,  totalRevenue: 42000 },
-  { lgaName: "Ballarat",   accountCount: 60,  totalRevenue: 31000 }
-]
-```
-
-### Configuring the Map
-
-The `config` object tells the map how to use your data:
-
-```javascript
-{
-  // REQUIRED -- which field in your data holds the region name
-  nameField: "lgaName",
-
-  // OPTIONAL -- omit to show all regions in neutral grey (no shading)
-  color: {
-    field: "totalRevenue",    // which numeric field to shade by
-    color: "#1565C0",         // base colour in hex (default: blue)
-    shades: 5,                // number of colour buckets (default: 5)
-    label: "Revenue"          // legend title
-  },
-
-  // OPTIONAL -- omit to show only the region name on hover
-  tooltip: {
-    fields: [
-      { label: "Accounts", key: "accountCount", format: "number" },
-      { label: "Revenue",  key: "totalRevenue", format: "currency" }
-    ]
-  }
-}
-```
-
-**Colour options:**
-
-| Property | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `field` | Yes | -- | Numeric field in your data to shade by |
-| `color` | No | `#1565C0` (blue) | Base hex colour. Examples: `#E53935` (red), `#43A047` (green) |
-| `shades` | No | `5` | Number of legend buckets |
-| `label` | No | Field name | Text shown as the legend title |
-
-**Tooltip format values:**
-
-| Format | Display |
-|--------|---------|
-| `"currency"` | `$1,234` |
-| `"number"` | `1,234` |
-| `"text"` | As-is |
-
-### Handling Region Clicks
-
-When a user clicks a region, the component fires a `regionselect` custom event. Listen for it with `onregionselect`.
-
-**`event.detail` shape:**
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `name` | String | The name of the clicked region (e.g., `"Melbourne"`) |
-| `color` | String | The hex colour assigned to the region (e.g., `"#1565C0"`), or `null` if no shading is configured |
-| `data` | Object | The matching record from your `data` array, or `undefined` if no data was provided for this region |
-
-```javascript
-handleRegionSelect(event) {
-  const { name, color, data } = event.detail;
-
-  console.log(name);   // "Melbourne"
-  console.log(color);  // "#1565C0"
-  console.log(data);   // { lgaName: "Melbourne", accountCount: 150, totalRevenue: 75000 }
-}
-```
-
-### Complete Example
-
-**Apex Controller:**
-
-```java
-public with sharing class AccountMapController {
-  @AuraEnabled(cacheable=true)
-  public static List<Map<String, Object>> getAccountsByLGA() {
-    List<AggregateResult> results = [
-      SELECT BillingState, COUNT(Id) cnt, SUM(AnnualRevenue) rev
-      FROM Account
-      WHERE BillingState != null
-      GROUP BY BillingState
-    ];
-
-    List<Map<String, Object>> output = new List<Map<String, Object>>();
-    for (AggregateResult ar : results) {
-      output.add(new Map<String, Object>{
-        'lgaName'      => (String) ar.get('BillingState'),
-        'accountCount' => (Integer) ar.get('cnt'),
-        'totalRevenue' => (Decimal) ar.get('rev')
-      });
-    }
-    return output;
-  }
-}
-```
-
-**LWC JavaScript:**
-
-```javascript
-import { LightningElement, wire } from "lwc";
-import getAccountsByLGA from "@salesforce/apex/AccountMapController.getAccountsByLGA";
-
-export default class AccountMap extends LightningElement {
-  records = [];
-
-  mapConfig = {
-    nameField: "lgaName",
-    color: {
-      field: "totalRevenue",
-      color: "#1565C0",
-      shades: 5,
-      label: "Total Revenue"
-    },
-    tooltip: {
-      fields: [
-        { label: "Accounts", key: "accountCount", format: "number" },
-        { label: "Revenue",  key: "totalRevenue", format: "currency" }
-      ]
-    }
-  };
-
-  @wire(getAccountsByLGA)
-  wiredAccounts({ data, error }) {
-    if (data) {
-      this.records = data;
-    }
-  }
-
-  handleRegionSelect(event) {
-    const { name } = event.detail;
-    // Navigate to a filtered view, show a detail panel, etc.
-  }
-}
-```
-
-**LWC Template:**
-
-```html
-<template>
-  <novaengine-geo-map
-    map-type="AU_VIC_LGA"
-    data={records}
-    config={mapConfig}
-    height="600px"
-    onregionselect={handleRegionSelect}>
-  </novaengine-geo-map>
-</template>
-```
+---
 
 ## Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
-| "Invalid map type" message | Check that the country package is installed and `map-type` matches a valid key from [Available Maps](#available-maps). |
-| All regions are grey | `config.color` is missing or `color.field` does not match a field in your data. |
-| Some regions are grey | Those regions have no matching record in your data. Check names match the [Region Name Reference](#region-name-reference) exactly (case-sensitive). |
-| Map shows a spinner indefinitely | The map boundary file failed to load. Refresh the page to retry. |
-| Legend is not showing | Provide both `config.color` and `config.color.field`. |
+| "Invalid map type" panel | The `map-type` doesn't match an installed map. The panel lists the installed keys; check the country package is installed and the key is spelled correctly. |
+| All regions are grey | `config.color` is missing, or `color.field` doesn't match a field in your data. |
+| Some regions are grey | Those regions have no matching record. Check the names match the country package's region names exactly (case-sensitive). For Australia, see [Region Names]({{ site.baseurl }}/geo-regions/australia-extension/region-names/). |
+| Legend is not showing | Provide `config.color` with a `field`. |
+| Map shows a spinner or doesn't load | Refresh the page to retry. If it persists, contact your administrator. |
 
 ---
 
