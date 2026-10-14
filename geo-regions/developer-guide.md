@@ -39,7 +39,7 @@ To display the map and shade it with your Salesforce data, build a wrapper Light
 
 ## Preparing your data
 
-Your data is an array of objects. One field must hold region names that match the map's region names **exactly** (case-sensitive). Region names for Australia are on the [Region Names]({{ site.baseurl }}/geo-regions/australia-extension/region-names/) page.
+Your data is an array of objects. One field must hold region names that match the map's region names **exactly** (case-sensitive). Region names for each Australian map are on that map's page under the [Australia extension]({{ site.baseurl }}/geo-regions/australia-extension/).
 
 ```javascript
 // Example: Accounts aggregated by LGA

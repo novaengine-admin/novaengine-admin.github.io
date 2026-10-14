@@ -18,7 +18,7 @@ This is the documentation repo for the Salesforce DX solution at `../AU_Map_Comp
 - `geo-regions/index.md` — "Geo Regions" top-level nav entry and subscriber overview (install, permission set, App Builder usage, troubleshooting).
 - `geo-regions/developer-guide.md` — component API, config, events, examples (child of Geo Regions).
 - `geo-regions/australia-extension/index.md` — Australia packages, install links, map table (child of Geo Regions, `has_children`).
-- `geo-regions/australia-extension/region-names.md` — **generated** from the GeoJSON `LGA_NAME25` property in `../AU_Map_Component/packages/geo-regions-au/main/default/staticresources`; regenerate rather than hand-edit when maps change.
+- `geo-regions/australia-extension/<state>.md` — one **generated** page per map (key, notes, region names) built from the GeoJSON `LGA_NAME25` property in `../AU_Map_Component/packages/geo-regions-au/main/default/staticresources`; regenerate rather than hand-edit when maps change, and keep the map table in the extension index in sync.
 - `README.md` — short pointer only; no product docs.
 
 Child pages' `parent` (and `grand_parent`) must match the parent page `title` exactly.

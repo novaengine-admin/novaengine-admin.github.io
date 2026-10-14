@@ -48,18 +48,19 @@ After installing, assign the **Geo Regions User** permission set. See [Assign th
 
 | Map | Key | Regions |
 |-----|-----|---------|
-| Australian Capital Territory | `AU_ACT_LGA` | 3 |
-| New South Wales | `AU_NSW_LGA` | 131 |
-| Northern Territory | `AU_NT_LGA` | 22 |
-| Other Territories | `AU_OT_LGA` | 4 |
-| Queensland | `AU_QLD_LGA` | 80 |
-| South Australia | `AU_SA_LGA` | 73 |
-| Tasmania | `AU_TAS_LGA` | 31 |
-| Victoria | `AU_VIC_LGA` | 82 |
-| Western Australia | `AU_WA_LGA` | 140 |
+| [Australian Capital Territory]({{ site.baseurl }}/geo-regions/australia-extension/act/) | `AU_ACT_LGA` | 3 |
+| [New South Wales]({{ site.baseurl }}/geo-regions/australia-extension/nsw/) | `AU_NSW_LGA` | 131 |
+| [Northern Territory]({{ site.baseurl }}/geo-regions/australia-extension/nt/) | `AU_NT_LGA` | 22 |
+| [Other Territories]({{ site.baseurl }}/geo-regions/australia-extension/ot/) | `AU_OT_LGA` | 4 |
+| [Queensland]({{ site.baseurl }}/geo-regions/australia-extension/qld/) | `AU_QLD_LGA` | 80 |
+| [South Australia]({{ site.baseurl }}/geo-regions/australia-extension/sa/) | `AU_SA_LGA` | 73 |
+| [Tasmania]({{ site.baseurl }}/geo-regions/australia-extension/tas/) | `AU_TAS_LGA` | 31 |
+| [Victoria]({{ site.baseurl }}/geo-regions/australia-extension/vic/) | `AU_VIC_LGA` | 82 |
+| [Western Australia]({{ site.baseurl }}/geo-regions/australia-extension/wa/) | `AU_WA_LGA` | 140 |
 
-Region counts include a few non-geographic entries such as `No usual address`.
+Region counts include a few non-geographic entries such as `No usual address`. Select a map for its region names and notes.
 
 Use the key as the `map-type` value, or pick the map from the **Region** dropdown in Lightning App Builder. New maps become available automatically after a package upgrade — no configuration needed.
 
-The names your data must use are listed on the [Region Names]({{ site.baseurl }}/geo-regions/australia-extension/region-names/) page.
+Region names in your data must match the names on each map page **exactly**, including capitalisation and any suffix such as `(Vic.)`.
+{: .warning }

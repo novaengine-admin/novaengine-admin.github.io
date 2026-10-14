@@ -85,7 +85,7 @@ Data and colour settings can't be set in App Builder. To shade the map with your
 |---------|----------|
 | "Invalid map type" panel | The `map-type` doesn't match an installed map. The panel lists the installed keys; check the country package is installed and the key is spelled correctly. |
 | All regions are grey | `config.color` is missing, or `color.field` doesn't match a field in your data. |
-| Some regions are grey | Those regions have no matching record. Check the names match the country package's region names exactly (case-sensitive). For Australia, see [Region Names]({{ site.baseurl }}/geo-regions/australia-extension/region-names/). |
+| Some regions are grey | Those regions have no matching record. Check the names match the country package's region names exactly (case-sensitive). For Australia, see the map pages under the [Australia extension]({{ site.baseurl }}/geo-regions/australia-extension/). |
 | Legend is not showing | Provide `config.color` with a `field`. |
 | Map shows a spinner or doesn't load | Refresh the page to retry. If it persists, contact your administrator. |
 
