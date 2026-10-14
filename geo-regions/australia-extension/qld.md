@@ -14,7 +14,6 @@ description: Queensland Local Government Area map (AU_QLD_LGA) and its region na
 |---|---|
 | **Map key** | `AU_QLD_LGA` |
 | **Regions** | 80 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_QLD_LGA" data={records} config={mapConfig}></novaengine-geo-map>

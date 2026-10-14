@@ -14,7 +14,6 @@ description: Other Territories Local Government Area map (AU_OT_LGA) and its reg
 |---|---|
 | **Map key** | `AU_OT_LGA` |
 | **Regions** | 4 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_OT_LGA" data={records} config={mapConfig}></novaengine-geo-map>

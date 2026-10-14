@@ -14,7 +14,6 @@ description: Western Australia Local Government Area map (AU_WA_LGA) and its reg
 |---|---|
 | **Map key** | `AU_WA_LGA` |
 | **Regions** | 140 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_WA_LGA" data={records} config={mapConfig}></novaengine-geo-map>

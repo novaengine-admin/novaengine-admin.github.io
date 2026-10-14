@@ -14,7 +14,6 @@ description: New South Wales Local Government Area map (AU_NSW_LGA) and its regi
 |---|---|
 | **Map key** | `AU_NSW_LGA` |
 | **Regions** | 131 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_NSW_LGA" data={records} config={mapConfig}></novaengine-geo-map>

@@ -14,7 +14,6 @@ description: Australian Capital Territory Local Government Area map (AU_ACT_LGA)
 |---|---|
 | **Map key** | `AU_ACT_LGA` |
 | **Regions** | 3 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_ACT_LGA" data={records} config={mapConfig}></novaengine-geo-map>

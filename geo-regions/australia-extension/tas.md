@@ -14,7 +14,6 @@ description: Tasmania Local Government Area map (AU_TAS_LGA) and its region name
 |---|---|
 | **Map key** | `AU_TAS_LGA` |
 | **Regions** | 31 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_TAS_LGA" data={records} config={mapConfig}></novaengine-geo-map>

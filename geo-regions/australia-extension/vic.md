@@ -14,7 +14,6 @@ description: Victoria Local Government Area map (AU_VIC_LGA) and its region name
 |---|---|
 | **Map key** | `AU_VIC_LGA` |
 | **Regions** | 82 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_VIC_LGA" data={records} config={mapConfig}></novaengine-geo-map>

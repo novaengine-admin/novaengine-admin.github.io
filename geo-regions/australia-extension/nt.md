@@ -14,7 +14,6 @@ description: Northern Territory Local Government Area map (AU_NT_LGA) and its re
 |---|---|
 | **Map key** | `AU_NT_LGA` |
 | **Regions** | 22 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_NT_LGA" data={records} config={mapConfig}></novaengine-geo-map>

@@ -14,7 +14,6 @@ description: South Australia Local Government Area map (AU_SA_LGA) and its regio
 |---|---|
 | **Map key** | `AU_SA_LGA` |
 | **Regions** | 73 |
-| **Name property** | `LGA_NAME25` |
 
 ```html
 <novaengine-geo-map map-type="AU_SA_LGA" data={records} config={mapConfig}></novaengine-geo-map>
