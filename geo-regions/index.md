@@ -55,7 +55,7 @@ Maps are delivered by country packages. Each installed map appears in the **Regi
 
 | Package | Maps |
 |---------|------|
-| [Geo Regions - Australia]({{ site.baseurl }}/geo-regions/australia-extension/) | Local Government Areas for ACT, NSW, NT, Other Territories, QLD, SA, TAS, VIC and WA |
+| [Geo Regions - Australia]({{ site.baseurl }}/geo-regions/australia-extension/) | Local Government Areas for ACT, NSW, NT, QLD, SA, TAS, VIC and WA |
 
 ---
 
