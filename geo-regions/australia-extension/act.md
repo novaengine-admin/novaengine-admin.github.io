@@ -24,6 +24,14 @@ description: Australian Capital Territory Local Government Area map (AU_ACT_LGA)
 
 ---
 
+## Example
+
+![Australian Capital Territory map shaded by total revenue]({{ site.baseurl }}/assets/images/maps/act.png)
+
+The map above is shaded by sample revenue figures (dummy data). Regions with no matching record stay grey.
+
+---
+
 ## Notes
 
 Region names in your data must match the names below **exactly**, including capitalisation and any suffix.

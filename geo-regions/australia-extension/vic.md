@@ -24,6 +24,14 @@ description: Victoria Local Government Area map (AU_VIC_LGA) and its region name
 
 ---
 
+## Example
+
+![Victoria map shaded by total revenue]({{ site.baseurl }}/assets/images/maps/vic.png)
+
+The map above is shaded by sample revenue figures (dummy data). Regions with no matching record stay grey.
+
+---
+
 ## Notes
 
 Region names in your data must match the names below **exactly**, including capitalisation and any suffix.

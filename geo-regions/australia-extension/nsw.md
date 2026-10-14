@@ -24,6 +24,14 @@ description: New South Wales Local Government Area map (AU_NSW_LGA) and its regi
 
 ---
 
+## Example
+
+![New South Wales map shaded by total revenue]({{ site.baseurl }}/assets/images/maps/nsw.png)
+
+The map above is shaded by sample revenue figures (dummy data). Regions with no matching record stay grey.
+
+---
+
 ## Notes
 
 Region names in your data must match the names below **exactly**, including capitalisation and any suffix.

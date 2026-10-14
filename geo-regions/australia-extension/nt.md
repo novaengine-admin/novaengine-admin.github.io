@@ -24,6 +24,14 @@ description: Northern Territory Local Government Area map (AU_NT_LGA) and its re
 
 ---
 
+## Example
+
+![Northern Territory map shaded by total revenue]({{ site.baseurl }}/assets/images/maps/nt.png)
+
+The map above is shaded by sample revenue figures (dummy data). Regions with no matching record stay grey.
+
+---
+
 ## Notes
 
 Region names in your data must match the names below **exactly**, including capitalisation and any suffix.
