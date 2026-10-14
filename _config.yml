@@ -1,7 +1,7 @@
-title: Product Documentation
-description: Subscriber and Developer Guide
+title: novaengine Documentation
+description: Guides for novaengine Salesforce managed packages
 
-url: "https://novaengine-admin.github.io"
+url: "https://documents.novaengine.com.au"
 baseurl: ""
 
 remote_theme: just-the-docs/just-the-docs

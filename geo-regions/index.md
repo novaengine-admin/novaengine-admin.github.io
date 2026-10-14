@@ -93,4 +93,4 @@ Data and colour settings can't be set in App Builder. To shade the map with your
 
 ## Support
 
-For questions or issues, contact your Salesforce administrator or the package provider.
+For questions or issues, email [contact@novaengine.com.au](mailto:contact@novaengine.com.au).

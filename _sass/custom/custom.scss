@@ -1,5 +1,5 @@
 /* =========================================
-   NovaEngine Documentation — Custom Styling
+   novaengine Documentation — Custom Styling
    Theme: Just the Docs
    ========================================= */
 
@@ -189,4 +189,25 @@
   .release-card {
     padding: 1rem;
   }
+}
+
+/* Home page */
+.home-hero-image {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid var(--nova-border);
+  border-radius: 8px;
+}
+
+.product-card {
+  background: var(--nova-surface);
+  border: 1px solid var(--nova-border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.product-card h3 {
+  margin-top: 0;
 }
