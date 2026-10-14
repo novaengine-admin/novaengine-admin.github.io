@@ -38,7 +38,7 @@ Install **Geo Regions** first, then **Geo Regions - Australia**. Each link opens
 
 | Version | Release | Production | Sandbox |
 |---------|---------|------------|---------|
-| 0.2.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXG1YAO) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXG1YAO) |
+| 0.2.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXW9YAO) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXW9YAO) |
 
 After installing, assign the **Geo Regions User** permission set. See [Assign the permission set]({{ site.baseurl }}/geo-regions/#2-assign-the-permission-set).
 
