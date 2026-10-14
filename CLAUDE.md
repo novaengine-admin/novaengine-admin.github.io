@@ -26,7 +26,7 @@ Child pages' `parent` (and `grand_parent`) must match the parent page `title` ex
 ## Conventions
 
 - Pages are Markdown with Just the Docs front matter (`title`, `parent`, `nav_order`, `has_children`, `permalink`). New country/extension pages go in their own folder as `index.md` with an explicit `permalink`.
-- Salesforce package install links (`04t...` IDs) appear in a version table with Production (`login.salesforce.com`) and Sandbox (`test.salesforce.com`) variants; update both and the version/release columns together on each release.
+- Salesforce package install links (`04t...` IDs) appear in a table showing only the latest released version, with Production (`login.salesforce.com`) and Sandbox (`test.salesforce.com`) variants; update both and the version/release columns together on each release.
 
 ## Previewing locally (optional, not set up in repo)
 

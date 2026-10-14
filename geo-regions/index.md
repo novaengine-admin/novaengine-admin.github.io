@@ -36,7 +36,6 @@ Install **Geo Regions** first, then the country packages you need. Each link ope
 | Version | Release | Production | Sandbox |
 |---------|---------|------------|---------|
 | 0.2.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXBBYA4) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000jCXBBYA4) |
-| 0.1.0 | 2026 October | [Install](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) | [Install](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tQE00000ilBhpYAE) |
 
 For country package install links, see the [Australia extension]({{ site.baseurl }}/geo-regions/australia-extension/).
 
