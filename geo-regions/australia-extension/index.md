@@ -59,7 +59,7 @@ After installing, assign the **Geo Regions User** permission set. See [Assign th
 
 Region counts include a few non-geographic entries such as `No usual address`. Select a map for its region names and notes.
 
-Use the key as the `map-type` value, or pick the map from the **Region** dropdown in Lightning App Builder. New maps become available automatically after a package upgrade — no configuration needed.
+Use the key as the `map-type` value. New maps become available automatically after a package upgrade — no configuration needed.
 
 Region names in your data must match the names on each map page **exactly**, including capitalisation and any suffix such as `(Vic.)`.
 {: .warning }

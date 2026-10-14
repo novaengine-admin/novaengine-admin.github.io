@@ -26,7 +26,7 @@ Guides for installing, configuring and extending novaengine's Salesforce managed
 
 Interactive choropleth maps for Lightning pages. Shade geographic regions by your Salesforce data to visualise metrics such as Account counts or Revenue across states and local government areas.
 
-- [Overview]({{ site.baseurl }}/geo-regions/): install, permission set, App Builder usage and troubleshooting
+- [Overview]({{ site.baseurl }}/geo-regions/): install, permission set and troubleshooting
 - [Developer Guide]({{ site.baseurl }}/geo-regions/developer-guide/): component API, configuration, events and examples
 - [Australia extension]({{ site.baseurl }}/geo-regions/australia-extension/): local government area maps for every state and territory
 
@@ -38,10 +38,11 @@ Latest release: **0.2.0** (October 2026). See the [install links]({{ site.baseur
 
 ## Where to start
 
-| I am an... | Start here |
-|------------|------------|
-| **Admin** | [Install the packages]({{ site.baseurl }}/geo-regions/#1-install-the-packages), [assign the permission set]({{ site.baseurl }}/geo-regions/#2-assign-the-permission-set), then [add a map to a page]({{ site.baseurl }}/geo-regions/#add-a-map-to-a-page). Stuck? See [Troubleshooting]({{ site.baseurl }}/geo-regions/#troubleshooting). |
-| **Developer** | Read the [Developer Guide]({{ site.baseurl }}/geo-regions/developer-guide/) to wrap the Geo Map component in your own LWC and shade it with your data. |
+1. **Install the packages.** Install Geo Regions, then the [Australia extension]({{ site.baseurl }}/geo-regions/australia-extension/) if you need Australian maps. See the [install links]({{ site.baseurl }}/geo-regions/#1-install-the-packages).
+2. **Assign the permission set.** Give the **Geo Regions User** permission set to everyone who will see the map. See [Assign the permission set]({{ site.baseurl }}/geo-regions/#2-assign-the-permission-set).
+3. **Build a wrapper component.** A developer wraps the Geo Map component in a custom LWC that queries your data and shades the map. Follow the [Developer Guide]({{ site.baseurl }}/geo-regions/developer-guide/).
+
+Stuck? See [Troubleshooting]({{ site.baseurl }}/geo-regions/#troubleshooting).
 
 ---
 

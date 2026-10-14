@@ -51,7 +51,7 @@ Assign the **Geo Regions User** permission set to everyone who needs access to t
 
 ## Available maps
 
-Maps are delivered by country packages. Each installed map appears in the **Region** dropdown in Lightning App Builder, and its key is the value to pass as `map-type` in code.
+Maps are delivered by country packages. Each map has a key, which is the value you pass as `map-type` to the Geo Map component in your wrapper LWC.
 
 | Package | Maps |
 |---------|------|
@@ -59,16 +59,9 @@ Maps are delivered by country packages. Each installed map appears in the **Regi
 
 ---
 
-## Add a map to a page
+## Show a map on a page
 
-The **Geo Map** component can be placed on App pages, Record pages and Home pages in Lightning App Builder. It has two properties:
-
-| Property | Description |
-|----------|-------------|
-| **Region** | The installed map to display. |
-| **Map Height** | CSS height of the map. Defaults to `520px`. |
-
-Data and colour settings can't be set in App Builder. To shade the map with your own data, a developer wraps the component in a custom LWC. See the [Developer Guide]({{ site.baseurl }}/geo-regions/developer-guide/).
+The Geo Map component is used from your own code. A developer builds a wrapper Lightning Web Component (LWC) that queries your Salesforce data, passes it to Geo Map with the `map-type` key of the map to display, and places the wrapper on a Lightning page. See the [Developer Guide]({{ site.baseurl }}/geo-regions/developer-guide/).
 
 ## Using the map
 

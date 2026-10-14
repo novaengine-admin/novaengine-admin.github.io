@@ -15,7 +15,7 @@ This is the documentation repo for the Salesforce DX solution at `../AU_Map_Comp
 - `_config.yml` — uses the remote theme `just-the-docs/just-the-docs` via `jekyll-remote-theme`; search enabled, light color scheme.
 - `_sass/custom/custom.scss` — NovaEngine styling overrides (colors defined as `--nova-*` CSS variables on `:root`). Just the Docs picks up `_sass/custom/custom.scss` automatically.
 - `index.md` — site root (`nav_exclude: true`, `has_children: true`).
-- `geo-regions/index.md` — "Geo Regions" top-level nav entry and subscriber overview (install, permission set, App Builder usage, troubleshooting).
+- `geo-regions/index.md` — "Geo Regions" top-level nav entry and subscriber overview (install, permission set, usage, troubleshooting).
 - `geo-regions/developer-guide.md` — component API, config, events, examples (child of Geo Regions).
 - `geo-regions/australia-extension/index.md` — Australia packages, install links, map table (child of Geo Regions, `has_children`).
 - `assets/images/maps/<state>.png` — example screenshots (dummy data) embedded in the map pages; captured from the QA Experience Cloud site.
